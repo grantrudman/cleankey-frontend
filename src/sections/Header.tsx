@@ -1,0 +1,32 @@
+import ArrowRight from '@/assets/arrow-right.svg';
+import Logo from '@/assets/logo.png';
+import Image from 'next/image';
+import MenuIcon from '@/assets/menu.svg';
+
+export const Header = () => {
+  return (
+    <header className="sticky top-0 z-20">
+      <div className="flex justify-center items-center py-3 bg-[#0D4D62] text-white text-sm gap-3">
+        <p className="text-white/60 hidden md:block ">Clean your short-term rental without the hassle</p>
+        <div className="inline-flex gap-1 items-center">
+          <p>Get a Free Quote</p>
+          <ArrowRight className= "h-4 w-4 inlne-flex justify-center items-center"/>
+        </div>
+      </div>
+      <div className="py-5 bg-[#FCFCFA]">
+        <div className="container">
+          <div className="flex items-center justify-between">
+            <Image src={Logo} alt="CleanKey Logo" width={1024} height={1024} className="h-16 w-16 md:h-20 md:w-20"/>
+            <MenuIcon className="h-5 w-5 md:hidden"/>
+            <nav className="hidden md:flex gap-6 text-black/60 items-center">
+              <a href="#">Home</a>
+              <a href="#">How it Works</a>
+              <a href="#">Reviews</a>
+              <button className="btn btn-primary">Get a Free Quote</button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
+};
