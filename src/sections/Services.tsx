@@ -57,7 +57,7 @@ export const Services = () => {
             How It Works for Property Owners
           </h3>
           <p className="text-center text-gray-600 mb-12 max-w-md mx-auto">
-            We've streamlined the process so you can start earning more with less effort
+            We&apos;ve streamlined the process so you can start earning more with less effort
           </p>
           
           <div className="relative flex flex-col space-y-12 max-w-lg mx-auto">

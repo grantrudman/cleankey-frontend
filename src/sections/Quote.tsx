@@ -1,9 +1,8 @@
 'use client';
 
-
 // At the top of your Quote component, add this:
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? 'web-production-1fb6.up.railway.app'  // Replace with your actual Railway URL
+  ? 'https://web-production-1fb6.up.railway.app'  // Added https://
   : 'http://localhost:8000'
 
 import React, { useState } from 'react';
@@ -229,7 +228,7 @@ if (isSubmitted && quote) {
                 </svg>
               </div>
               <div>
-                <div className="font-semibold text-gray-800">Vetted & Insured Cleaners</div>
+                <div className="font-semibold text-gray-800">Vetted &amp; Insured Cleaners</div>
                 <div className="text-sm text-gray-600">All our cleaners are background-checked and fully insured for your peace of mind</div>
               </div>
             </div>
@@ -242,7 +241,7 @@ if (isSubmitted && quote) {
               </div>
               <div>
                 <div className="font-semibold text-gray-800">Quality Guarantee</div>
-                <div className="text-sm text-gray-600">Not satisfied? We'll return within 24 hours to make it right, at no extra cost</div>
+                <div className="text-sm text-gray-600">Not satisfied? We&apos;ll return within 24 hours to make it right, at no extra cost</div>
               </div>
             </div>
 
@@ -285,7 +284,7 @@ if (isSubmitted && quote) {
 
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
             <p className="text-sm text-blue-800">
-              <strong>📧 Quote sent to your email!</strong> We've sent your detailed quote to {email}. 
+              <strong>📧 Quote sent to your email!</strong> We&apos;ve sent your detailed quote to {email}. 
               Ready to book? Reply to the email or contact us directly.
             </p>
           </div>
@@ -700,7 +699,7 @@ if (isSubmitted && quote) {
             </button>
 
             <p className="text-center text-sm text-gray-500 mt-4">
-              We'll email your personalized cleaning quote
+              We&apos;ll email your personalized cleaning quote
             </p>
           </div>
         </form>
