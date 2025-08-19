@@ -328,7 +328,7 @@ if (isSubmitted && quote) {
 }
 
   return (
-    <section className="relative bg-white py-20 overflow-hidden">
+    <section id="quote-section" className="relative bg-white py-20 overflow-hidden">
       <div className="container">
         <div className="md:pl-8">
           <h2 className="section-title pt-8">Accurately estimate your cleaning fee</h2>

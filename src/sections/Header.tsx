@@ -4,8 +4,20 @@ import Image from 'next/image';
 import MenuIcon from '@/assets/menu.svg';
 
 export const Header = () => {
+
+  const scrollToQuote = () => {
+
+    const quoteSection = document.getElementById('quote-section');
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-20">
+    <header className="sticky top-0 z-20" id="home-section">
       <div className="flex justify-center items-center py-3 bg-[#0D4D62] text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block ">Clean your short-term rental without the hassle</p>
         <div className="inline-flex gap-1 items-center">
@@ -19,10 +31,10 @@ export const Header = () => {
             <Image src={Logo} alt="CleanKey Logo" width={1024} height={1024} className="h-16 w-16 md:h-20 md:w-20"/>
             <MenuIcon className="h-5 w-5 md:hidden"/>
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="#">Home</a>
-              <a href="#">How it Works</a>
-              <a href="#">Reviews</a>
-              <button className="btn btn-primary">Get a Free Quote</button>
+              <a href="home-section">Home</a>
+              <a href="services-section">How it Works</a>
+              <a href="testimonials-section">Reviews</a>
+              <button className="btn btn-primary" onClick={scrollToQuote}>Get a Free Quote</button>
             </nav>
           </div>
         </div>
