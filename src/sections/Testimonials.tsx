@@ -128,17 +128,6 @@ const TestimonialsColumn = (props: {
 );
 
 export const Testimonials = () => {
-
-  const scrollToQuote = () => {
-    const quoteSection = document.getElementById('quote-section');
-    if (quoteSection) {
-      quoteSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   return (
     <section className="bg-gray-50 relative overflow-hidden" id="testimonials-section">
       
@@ -183,9 +172,12 @@ export const Testimonials = () => {
             <p className="text-white/90 mb-6">
               Start earning more with professional cleaning that your guests will love
             </p>
-            <button className="bg-white text-[#0D4D62] font-semibold px-8 py-3 rounded-full hover:bg-gray-50 transition-all duration-300 transform hover:scale-105" onClick={scrollToQuote}>
+            <a 
+              href="#quote-section" 
+              className="inline-block bg-white text-[#0D4D62] font-semibold px-8 py-3 rounded-full hover:bg-gray-50 transition-all duration-300 transform hover:scale-105"
+            >
               Get Your Free Quote Today
-            </button>
+            </a>
           </div>
         </div>
       </div>

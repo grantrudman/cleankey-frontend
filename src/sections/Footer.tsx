@@ -1,5 +1,3 @@
-"use client";
-
 import Insta from '@/assets/social-insta.svg';
 import Linkedin from '@/assets/social-linkedin.svg';
 import X from '@/assets/social-x.svg';
@@ -12,16 +10,16 @@ export const Footer = () => {
           
           {/* Navigation Links */}
           <div className="flex gap-4 md:gap-8 flex-wrap justify-center">
-            <a href="home-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Home</a>
-            <a href="services-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">How It Works</a>
-            <a href="testimonials-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Reviews</a>
-            <a href="quote-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Quote</a>
+            <a href="#home-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Home</a>
+            <a href="#services-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">How It Works</a>
+            <a href="#testimonials-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Reviews</a>
+            <a href="#quote-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Quote</a>
           </div>
 
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-gray-300 text-sm items-center">
-            <a href="mailto:info@cleankey.com" className="hover:text-white transition-colors">cleankey.business@gmail.com</a>
-            <a href="tel:+15551234567" className="hover:text-white transition-colors">(817) 889-4910</a>
+            <a href="mailto:cleankey.business@gmail.com" className="hover:text-white transition-colors">cleankey.business@gmail.com</a>
+            <a href="tel:+18178894910" className="hover:text-white transition-colors">(817) 889-4910</a>
           </div>
 
           {/* Social Media Icons */}

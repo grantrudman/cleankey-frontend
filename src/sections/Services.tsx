@@ -1,5 +1,3 @@
-'use client';
-
 type Step = {
   title: string;
   description: string;
@@ -25,17 +23,6 @@ const steps: Step[] = [
 ];
 
 export const Services = () => {
-
-  const scrollToQuote = () => {
-    const quoteSection = document.getElementById('quote-section');
-    if (quoteSection) {
-      quoteSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   return (
     <section className="relative bg-gradient-to-b from-[#FFFFFF] to-[#FCFCFA] py-20 overflow-hidden" id="services-section">
       <div className="container">
@@ -89,10 +76,10 @@ export const Services = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-16 text-center" onClick={scrollToQuote}>
-            <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#5DCCB7] to-[#0D4D62] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+          <div className="mt-16 text-center">
+            <a href="#quote-section" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#5DCCB7] to-[#0D4D62] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
               Start Earning More Today →
-            </div>
+            </a>
           </div>
         </div>
         

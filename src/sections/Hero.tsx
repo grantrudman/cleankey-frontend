@@ -3,17 +3,6 @@ import Key from "@/assets/key.png";
 import Image from 'next/image';
 
 export const Hero = () => {
-  // Function to scroll to the quote section
-  const scrollToQuote = () => {
-    const quoteSection = document.getElementById('quote-section');
-    if (quoteSection) {
-      quoteSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   return (
     <section className="pt-20 pb-40 md:pt-24 md:pb-32 md:pb-10 bg-[radial-gradient(ellipse_200%_100%__at_bottom_left,_#5DCCB7_0%,_#FCFCFA_100%)]">
       <div className="container">
@@ -24,19 +13,13 @@ export const Hero = () => {
               CleanKey is a property cleaning company that specializes in same-day turns for short-term rentals, ensuring your property is always guest-ready.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button 
-                className="btn btn-primary"
-                onClick={scrollToQuote}
-              >
+              <a href="#quote-section" className="btn btn-primary">
                 Get a Free Quote
-              </button>
-              <button 
-                className="btn btn-text gap-1"
-                onClick={scrollToQuote}
-              >
+              </a>
+              <a href="#quote-section" className="btn btn-text gap-1">
                 <span>Learn More</span>
                 <ArrowIcon className="h-5 w-5"/>
-              </button>
+              </a>
             </div>
           </div>
           <div className="flex justify-center mt-20 md:mt-0 md:flex-1 relative">
