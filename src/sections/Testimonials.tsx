@@ -140,7 +140,7 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="bg-gray-50 relative overflow-hidden">
+    <section className="bg-gray-50 relative overflow-hidden" id="testimonials-section">
       
       <div className="container relative">
         {/* Enhanced Header */}

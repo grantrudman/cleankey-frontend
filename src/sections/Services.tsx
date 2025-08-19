@@ -37,7 +37,7 @@ export const Services = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-[#FFFFFF] to-[#FCFCFA] py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-[#FFFFFF] to-[#FCFCFA] py-20 overflow-hidden" id="services-section">
       <div className="container">
         <div className="md:pl-8">
           <h2 className="section-title pt-8">Professional Cleaning That Drives Results</h2>
