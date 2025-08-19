@@ -113,7 +113,7 @@ const TestimonialsColumn = (props: {
         ))}
       </div>
       
-      <div className="text-gray-700 mb-4 italic">"{text}"</div>
+      <div className="text-gray-700 mb-4 italic">{text}</div>
       
       <div className="flex items-center gap-3">
         <img src={imageSrc} alt={name} width={40} height={40} className="h-10 w-10 rounded-full border-2 border-[#5DCCB7]"/>
@@ -138,8 +138,8 @@ export const Testimonials = () => {
             Real Property Owners, Real Results
           </h2>
           <p className="section-description mt-5">
-            Join 500+ successful property owners who've transformed their short-term rentals with our professional cleaning services. 
-            See how they're earning more, getting better reviews, and saving time.
+            Join 500+ successful property owners who&apos;ve transformed their short-term rentals with our professional cleaning services. 
+            See how they&apos;re earning more, getting better reviews, and saving time.
           </p>
           
           {/* Impact Statistics */}

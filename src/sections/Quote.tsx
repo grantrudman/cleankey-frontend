@@ -18,7 +18,7 @@ export const Quote = () => {
   const [extraSpaces, setExtraSpaces] = useState('');
   const [carpetArea, setCarpetArea] = useState(0);
   const [hardFloorsArea, setHardFloorsArea] = useState(0);
-  const [petsAllowed, setPetsAllowed] = useState(null);
+  const [petsAllowed, setPetsAllowed] = useState<boolean | null>(null);
   const [hourlyRate, setHourlyRate] = useState(40);
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
@@ -29,14 +29,15 @@ export const Quote = () => {
 
   // New state for form submission
   const [isLoading, setIsLoading] = useState(false);
-  const [quote, setQuote] = useState(null);
+  type QuoteResult = { quote: number; [key: string]: any };
+  const [quote, setQuote] = useState<QuoteResult | null>(null);
   const [error, setError] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Helper function to handle numeric input changes
-  const handleNumericChange = (value, setter) => {
+  const handleNumericChange = (value: string, setter: (val: string) => void) => {
     // Allow empty string or valid numbers
-    if (value === '' || (!isNaN(value) && parseInt(value) >= 0)) {
+    if (value === '' || (!isNaN(Number(value)) && parseInt(value) >= 0)) {
       setter(value);
     }
   };
@@ -116,7 +117,7 @@ export const Quote = () => {
     return true;
   };
 
-const handleSubmit = async (e) => {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   setError('');
   
@@ -175,7 +176,11 @@ const handleSubmit = async (e) => {
     console.log('Quote result:', result);
   } catch (error) {
     console.error('Error:', error);
-    setError(`Failed to get quote: ${error.message}`);
+    if (error instanceof Error) {
+      setError(`Failed to get quote: ${error.message}`);
+    } else {
+      setError('Failed to get quote: An unknown error occurred.');
+    }
   } finally {
     setIsLoading(false);
   }
@@ -494,7 +499,7 @@ if (isSubmitted && quote) {
                     value={carpetArea === 0 ? '' : carpetArea}
                     onChange={(e) => {
                       const value = e.target.value;
-                      if (value === '' || (!isNaN(value) && parseInt(value) >= 0 && parseInt(value) <= 5000)) {
+                      if (value === '' || (!isNaN(Number(value)) && parseInt(value) >= 0 && parseInt(value) <= 5000)) {
                         setCarpetArea(parseInt(value) || 0);
                       }
                     }}
@@ -525,7 +530,7 @@ if (isSubmitted && quote) {
                     value={hardFloorsArea === 0 ? '' : hardFloorsArea}
                     onChange={(e) => {
                       const value = e.target.value;
-                      if (value === '' || (!isNaN(value) && parseInt(value) >= 0 && parseInt(value) <= 5000)) {
+                      if (value === '' || (!isNaN(Number(value)) && parseInt(value) >= 0 && parseInt(value) <= 5000)) {
                         setHardFloorsArea(parseInt(value) || 0);
                       }
                     }}
