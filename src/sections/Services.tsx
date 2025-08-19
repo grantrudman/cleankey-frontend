@@ -1,3 +1,5 @@
+"use client";
+
 type Step = {
   title: string;
   description: string;
