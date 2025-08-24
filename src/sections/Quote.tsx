@@ -303,13 +303,13 @@ if (isSubmitted && quote) {
           <div className="flex flex-col sm:flex-row gap-3">
             <button 
               onClick={resetForm}
-              className="flex-1 bg-white border-2 border-[#0D4D62] text-[#0D4D62] font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:bg-[#0D4D62] hover:text-white transform hover:scale-105"
+              className="flex-1 h-12 bg-white border-2 border-[#0D4D62] text-[#0D4D62] font-semibold px-6 rounded-lg shadow-md transition-all duration-300 hover:bg-[#0D4D62] hover:text-white transform hover:scale-105 inline-flex items-center justify-center"
             >
               Get Another Quote
             </button>
             <button 
               onClick={() => window.open('https://calendly.com/cleankey-business/30min', '_blank', 'noopener,noreferrer')}
-              className="flex-1 bg-[#0D4D62] border-2 border-[#0D4D62] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:bg-[#0A3A4A] hover:border-[#0A3A4A] transform hover:scale-105"
+              className="flex-1 h-12 bg-[#0D4D62] border-2 border-[#0D4D62] text-white font-semibold px-6 rounded-lg shadow-md transition-all duration-300 hover:bg-[#0A3A4A] hover:border-[#0A3A4A] transform hover:scale-105 inline-flex items-center justify-center"
             >
               Talk With The Team
             </button>
