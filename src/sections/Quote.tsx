@@ -300,7 +300,6 @@ if (isSubmitted && quote) {
               Ready to book? Reply to the email or contact us directly.
             </p>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-3">
             <button 
               onClick={resetForm}
@@ -308,13 +307,12 @@ if (isSubmitted && quote) {
             >
               Get Another Quote
             </button>
-            <a href="https://calendly.com/cleankey-business/30min" target="_blank" rel="noopener noreferrer">
-              <button 
-                className="flex-1 bg-[#0D4D62] hover:bg-[#0A3A4A] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-              >
-                Talk With The Team
-              </button>
-            </a>
+            <button 
+              onClick={() => window.open('https://calendly.com/cleankey-business/30min', '_blank', 'noopener,noreferrer')}
+              className="flex-1 bg-[#0D4D62] hover:bg-[#0A3A4A] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+            >
+              Talk With The Team
+            </button>
           </div>
         </div>
       </div>
