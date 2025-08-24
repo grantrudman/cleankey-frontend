@@ -309,7 +309,7 @@ if (isSubmitted && quote) {
             </button>
             <button 
               onClick={() => window.open('https://calendly.com/cleankey-business/30min', '_blank', 'noopener,noreferrer')}
-              className="flex-1 bg-[#0D4D62] hover:bg-[#0A3A4A] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+              className="flex-1 bg-[#0D4D62] border-2 border-[#0D4D62] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:bg-[#0A3A4A] hover:border-[#0A3A4A] transform hover:scale-105"
             >
               Talk With The Team
             </button>
