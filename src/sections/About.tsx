@@ -10,7 +10,7 @@ type Solution = {
 
 const painPoints: PainPoint[] = [
   {
-    text: 'Last-minute cleaner cancellations ruining your bookings',
+    text: 'Cleaner cancellations ruining your bookings',
   },
   {
     text: 'Poor cleaning quality leading to bad guest reviews',
