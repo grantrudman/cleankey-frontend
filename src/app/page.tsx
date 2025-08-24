@@ -1,9 +1,10 @@
 import {Header} from "@/sections/Header";
 import {Hero} from "@/sections/Hero";
 import {Services} from "@/sections/Services";
-import {Testimonials} from "@/sections/Testimonials";
+import {About} from "@/sections/About";
 import {Quote} from "@/sections/Quote";
 import {Footer} from "@/sections/Footer";
+
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
     <Header />
     <Hero />
     <Services />
-    <Testimonials />
+    <About />
     <Quote />
     <Footer />
   </>

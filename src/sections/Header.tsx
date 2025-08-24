@@ -5,7 +5,7 @@ import MenuIcon from '@/assets/menu.svg';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-20" id="home-section">
+    <header className="sticky top-0 z-20">
       <div className="flex justify-center items-center py-3 bg-[#0D4D62] text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block">Clean your short-term rental without the hassle</p>
         <div className="inline-flex gap-1 items-center">
@@ -23,7 +23,7 @@ export const Header = () => {
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
               <a href="#home-section" className="hover:text-black transition-colors">Home</a>
               <a href="#services-section" className="hover:text-black transition-colors">How it Works</a>
-              <a href="#testimonials-section" className="hover:text-black transition-colors">Reviews</a>
+              <a href="#about-section" className="hover:text-black transition-colors">About</a>
               <a href="#quote-section" className="btn btn-primary">Get a Free Quote</a>
             </nav>
           </div>

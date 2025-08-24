@@ -328,12 +328,12 @@ if (isSubmitted && quote) {
 }
 
   return (
-    <section id="quote-section" className="relative bg-white py-20 overflow-hidden">
+    <section id="quote-section" className="relative bg-white py-20 overflow-hidden scroll-mt-[70px]">
       <div className="container">
         <div className="md:pl-8">
-          <h2 className="section-title pt-8">Accurately estimate your cleaning fee</h2>
+          <h2 className="section-title pt-8">Estimate Your Cleaning Cost</h2>
           <p className="section-description mt-5">
-            We estimate your cleaning fee by calculating how long it takes to clean each part of the property, then multiplying by an hourly rate. This helps both hosts and cleaners set fair, realistic prices based on the actual work involved.
+            We estimate your cleaning fee based off of the property information you provide, helping both hosts and cleaners set fair, realistic prices based on the actual work involved.
           </p>
         </div>
 

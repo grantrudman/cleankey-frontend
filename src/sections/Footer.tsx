@@ -12,7 +12,7 @@ export const Footer = () => {
           <div className="flex gap-4 md:gap-8 flex-wrap justify-center">
             <a href="#home-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Home</a>
             <a href="#services-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">How It Works</a>
-            <a href="#testimonials-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Reviews</a>
+            <a href="#about-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">About</a>
             <a href="#quote-section" className="text-gray-300 hover:text-white transition-colors whitespace-nowrap">Quote</a>
           </div>
 

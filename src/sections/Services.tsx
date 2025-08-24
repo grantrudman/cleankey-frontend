@@ -9,7 +9,7 @@ type Step = {
 const steps: Step[] = [
   {
     title: 'Get Your Quote',
-    description: 'Receive a customized quote within 24 hours. No hidden fees, no surprises – just transparent pricing for your specific property needs.',
+    description: 'Receive a customized quote within minutes. No hidden fees, no surprises – just transparent pricing for your specific property needs.',
     icon: '💰',
   },
   {
@@ -26,11 +26,11 @@ const steps: Step[] = [
 
 export const Services = () => {
   return (
-    <section className="relative bg-gradient-to-b from-[#FFFFFF] to-[#FCFCFA] py-20 overflow-hidden" id="services-section">
+    <section id="services-section" className="relative bg-gradient-to-b from-[#FFFFFF] to-[#FCFCFA] py-20 overflow-hidden scroll-mt-[70px]">
       <div className="container">
         <div className="md:pl-8">
           <h2 className="section-title pt-8">Professional Cleaning That Drives Results</h2>
-          <p className="section-description mt-5">Transform your short-term rental into a guest magnet. Our expert cleaning services boost your ratings, increase bookings, and maximize your revenue – all while saving you time and stress.</p>
+          <p className="section-description mt-5">Our expert cleaning services boost your ratings, increase bookings, and maximize your revenue – all while saving you time and stress.</p>
         </div>
 
         {/* Success Stats */}
@@ -40,11 +40,11 @@ export const Services = () => {
             <p className="text-sm text-gray-600">Guest Satisfaction Rate</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-[#5DCCB7] mb-2">24hr</div>
+            <div className="text-3xl font-bold text-[#5DCCB7] mb-2">4 hrs</div>
             <p className="text-sm text-gray-600">Turnaround Time</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-[#5DCCB7] mb-2">4.9★</div>
+            <div className="text-3xl font-bold text-[#5DCCB7] mb-2">4.9 ★</div>
             <p className="text-sm text-gray-600">Average Host Rating</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ export const Services = () => {
             How It Works for Property Owners
           </h3>
           <p className="text-center text-gray-600 mb-12 max-w-md mx-auto">
-            We&apos;ve streamlined the process so you can start earning more with less effort
+            We&apos;ve streamlined the process so you can start earning more with less effort.
           </p>
           
           <div className="relative flex flex-col space-y-12 max-w-lg mx-auto">
@@ -80,7 +80,7 @@ export const Services = () => {
           {/* Call to Action */}
           <div className="mt-16 text-center">
             <a href="#quote-section" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#5DCCB7] to-[#0D4D62] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
-              Start Earning More Today →
+              Get Started →
             </a>
           </div>
         </div>
