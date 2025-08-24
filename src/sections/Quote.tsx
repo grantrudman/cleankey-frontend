@@ -173,6 +173,13 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     const result = await response.json();
     setQuote(result);  // ✅ Store the full result object, not just result.quote
     setIsSubmitted(true);
+
+    // Scroll to top of quote section when quote is generated
+    const quoteSection = document.getElementById('quote-section');
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     console.log('Quote result:', result);
   } catch (error) {
     console.error('Error:', error);
@@ -301,11 +308,13 @@ if (isSubmitted && quote) {
             >
               Get Another Quote
             </button>
-            <button 
-              className="flex-1 bg-[#0D4D62] hover:bg-[#0A3A4A] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-            >
-              Book Now
-            </button>
+            <a href="https://calendly.com/cleankey-business/30min" target="_blank" rel="noopener noreferrer">
+              <button 
+                className="flex-1 bg-[#0D4D62] hover:bg-[#0A3A4A] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+              >
+                Talk With The Team
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const painPoints: PainPoint[] = [
     text: 'Poor cleaning quality leading to bad guest reviews',
   },
   {
-    text: 'Missed turnovers costing you revenue',
+    text: 'Missed turnovers costing you revenue and your peice of mind',
   },
 ];
 
@@ -41,32 +41,76 @@ export const About = () => {
           <p className="section-description mt-5">After years in the industry, we discovered that <strong>cleaning is consistently the most difficult and stressful part of property ownership</strong>. That&#39;s why we created CleanKey – to make turnover management as streamlined and simple as possible, so you can focus on what matters most: maximizing your investment.</p>
         </div>
 
-        {/* Column Headers */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-8 mt-20 max-w-[900px] mx-auto">
-          <div className="text-center lg:text-center">
-            <h3 className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-red-600 to-red-800 text-transparent bg-clip-text">
-              The Problems You Face
-            </h3>
+        {/* Desktop Layout: Side by Side */}
+        <div className="hidden lg:block">
+          {/* Column Headers */}
+          <div className="grid grid-cols-2 gap-16 mb-8 mt-20 max-w-[900px] mx-auto">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-red-600 to-red-800 text-transparent bg-clip-text">
+                The Problems You Face
+              </h3>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-[#5DCCB7] to-[#0D4D62] text-transparent bg-clip-text">
+                Our Solution
+              </h3>
+            </div>
           </div>
-          <div className="text-center lg:text-center">
-            <h3 className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-[#5DCCB7] to-[#0D4D62] text-transparent bg-clip-text">
-              Our Solution
-            </h3>
+
+          {/* Problem vs Solution Cards */}
+          <div className="space-y-8 max-w-[900px] mx-auto">
+            {painPoints.map((point, index) => (
+              <div key={index} className="relative">
+                {/* Connection Line */}
+                <div className="absolute left-1/2 top-1/2 w-16 h-0.5 bg-gradient-to-r from-red-400 to-[#5DCCB7] transform -translate-y-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute right-0 top-1/2 w-0 h-0 border-l-[8px] border-l-[#5DCCB7] border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent transform -translate-y-1/2"></div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-16">
+                  {/* Problem Card */}
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-100 to-red-50 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+                    <div className="relative bg-white rounded-2xl p-6 shadow-lg border-l-4 border-red-500 hover:shadow-xl transition-shadow duration-300">
+                      <div className="flex items-start space-x-3">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 flex items-center justify-center mt-1">
+                          <div className="w-3 h-3 rounded-full bg-white"></div>
+                        </div>
+                        <p className="text-gray-700 font-medium leading-relaxed">{point.text}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Solution Card */}
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#5DCCB7]/20 to-[#0D4D62]/20 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+                    <div className="relative bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#5DCCB7] hover:shadow-xl transition-shadow duration-300">
+                      <div className="flex items-start space-x-3">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#5DCCB7] flex items-center justify-center mt-1">
+                          <div className="w-2 h-2 rounded-full bg-white"></div>
+                        </div>
+                        <p className="text-gray-700 font-semibold leading-relaxed">{solutions[index].text}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Problem vs Solution Cards */}
-        <div className="space-y-8 max-w-[900px] mx-auto">
-          {painPoints.map((point, index) => (
-            <div key={index} className="relative">
-              {/* Connection Line */}
-              <div className="absolute left-1/2 top-1/2 w-16 h-0.5 bg-gradient-to-r from-red-400 to-[#5DCCB7] transform -translate-y-1/2 -translate-x-1/2 z-10 hidden lg:block">
-                <div className="absolute right-0 top-1/2 w-0 h-0 border-l-[8px] border-l-[#5DCCB7] border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent transform -translate-y-1/2"></div>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-                {/* Problem Card */}
-                <div className="relative group">
+        {/* Mobile Layout: Stacked */}
+        <div className="lg:hidden mt-16">
+          {/* Pain Points Section */}
+          <div className="mb-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-red-600 to-red-800 text-transparent bg-clip-text">
+                The Problems You Face
+              </h3>
+            </div>
+            
+            <div className="space-y-6">
+              {painPoints.map((point, index) => (
+                <div key={`problem-${index}`} className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-red-100 to-red-50 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                   <div className="relative bg-white rounded-2xl p-6 shadow-lg border-l-4 border-red-500 hover:shadow-xl transition-shadow duration-300">
                     <div className="flex items-start space-x-3">
@@ -77,22 +121,34 @@ export const About = () => {
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
 
-                {/* Solution Card */}
-                <div className="relative group">
+          {/* Solutions Section */}
+          <div>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-[#5DCCB7] to-[#0D4D62] text-transparent bg-clip-text">
+                Our Solution
+              </h3>
+            </div>
+            
+            <div className="space-y-6">
+              {solutions.map((solution, index) => (
+                <div key={`solution-${index}`} className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#5DCCB7]/20 to-[#0D4D62]/20 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
                   <div className="relative bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#5DCCB7] hover:shadow-xl transition-shadow duration-300">
                     <div className="flex items-start space-x-3">
                       <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#5DCCB7] flex items-center justify-center mt-1">
                         <div className="w-2 h-2 rounded-full bg-white"></div>
                       </div>
-                      <p className="text-gray-700 font-semibold leading-relaxed">{solutions[index].text}</p>
+                      <p className="text-gray-700 font-semibold leading-relaxed">{solution.text}</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Call to Action */}
