@@ -24,13 +24,10 @@ export const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex gap-4">
-            <a href="#" className="text-gray-300 hover:text-[#5DCCB7] transition-colors">
+            <a href="https://www.instagram.com/cleankeycleaning/" className="text-gray-300 hover:text-[#5DCCB7] transition-colors">
               <Insta className="w-6 h-6 fill-current" />
             </a>
-            <a href="#" className="text-gray-300 hover:text-[#5DCCB7] transition-colors">
-              <Linkedin className="w-6 h-6 fill-current" />
-            </a>
-            <a href="#" className="text-gray-300 hover:text-[#5DCCB7] transition-colors">
+            <a href="https://x.com/Clean__Key__" className="text-gray-300 hover:text-[#5DCCB7] transition-colors">
               <X className="w-6 h-6 fill-current" />
             </a>
           </div>

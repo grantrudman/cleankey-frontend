@@ -10,7 +10,7 @@ type Solution = {
 
 const painPoints: PainPoint[] = [
   {
-    text: 'Cleaner cancellations ruining your bookings',
+    text: 'Cleaner cancellations ruining guest first impressions',
   },
   {
     text: 'Poor cleaning quality leading to bad guest reviews',
@@ -28,7 +28,7 @@ const solutions: Solution[] = [
     text: '5-star cleaning quality that guests rave about',
   },
   {
-    text: '100% reliability - we\'ve never missed a clean',
+    text: 'Let our cleaners clean, so you don&#39;t have to',
   },
 ];
 
