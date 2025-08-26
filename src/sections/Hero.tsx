@@ -10,7 +10,7 @@ export const Hero = () => {
           <div className="md:w-[478px] md:pl-8">
             <h1 className="text-5xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#0D4D62] text-transparent bg-clip-text md:bg-clip-text leading-[1.2] mt-4">Rental Cleaning Made Easy</h1>
             <p className="text-xl text-[#0D4D62] tracking-tight mt-6">
-              Same-day turns with 100% reliability - no cancellations, no no-shows. Transform your short-term rental into a guest magnet with professional cleaning that&#39;s completed within 4 hours of checkout, every single time.
+              Same-day turns - no cancellations, no no-shows. Transform your short-term rental into a guest magnet with professional cleaning that&#39;s completed within 4 hours of checkout, every single time.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <a href="#quote-section" className="btn btn-primary">
