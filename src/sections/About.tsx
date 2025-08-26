@@ -28,7 +28,7 @@ const solutions: Solution[] = [
     text: '5-star cleaning quality that guests rave about',
   },
   {
-    text: 'Let our cleaners clean, so you don&#39;t have to',
+    text: 'Let our cleaners clean, so you can focus on your business',
   },
 ];
 
